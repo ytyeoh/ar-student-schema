@@ -1,0 +1,14 @@
+write a program able user use terminal to add or delete , show list,
+use .find(#) to find a id user input to get corrct list to delete
+add new line as auto increment.
+print list to requirment and all list.
+
+whatever data from front end wiil go to controller convert to data type that model require to apply CRUD with database.
+
+list all with .all
+delete with id and show name of this id
+add with string behind .
+
+
+
+!!!!githut link????

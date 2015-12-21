@@ -33,6 +33,18 @@ task "db:version" do
   puts "Current version: #{ActiveRecord::Migrator.current_version}"
 end
 
+task "db:seed" do
+
+   9.times do
+      Student.create :first_name => Faker::Name.first_name,
+                     :last_name  => Faker::Name.last_name,
+                     :gender     => ['m', 'f'].sample,
+                     :email      => Faker::Internet.email,
+                     :phone     => Faker::PhoneNumber.phone_number,
+                     :birthday  => Date.today - rand(15..40)*365
+    end
+  end
+
 desc "Run the specs"
 RSpec::Core::RakeTask.new(:specs)
 
